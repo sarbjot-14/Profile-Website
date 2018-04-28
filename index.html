@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sarbjot Singh</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="profile" >
+
+    <h1 class="name"><img class= "profile-pic" src="./img/jot.png"/>Sarbjot Singh</h1>
+    <h3 class="subname">Currently studying to become a Software Engineer. Trying to absorb as much knowledge as possible in our short lives.</h3>
+
+  </div>
+
+
+  <div class="pimg1">
+    <div class="ptext">
+      <span class="border">
+        <b>Education</b>
+      </span>
+    </div>
+  </div>
+
+  <section class="section section-light">
+      <ul>
+        <li><h3>Simon Fraser University: 2016 - Present</h3><p>Currently pursuing Software Systems Major (Bachelor of Science)</p></li>
+        <li><h3>North Delta Secondary School: Grad of 2016</h3><p>High School Diploma </p></li>
+      </ul>
+
+
+  </section>
+
+  <div class="pimg2">
+    <div class="ptext">
+      <span class="border">
+        Work Experience
+      </span>
+    </div>
+  </div>
+
+
+
+  <section class="section section-dark">
+    <div class="slideshow-container">
+
+    <div class="mySlides">
+      <h2 class= "work">Damco Warehouse</h2>
+      <p class="author">Delta, BC | Receiving and Shipping | Summer 2016</p>
+    </div>
+
+    <div class="mySlides">
+      <h2 class= "work">Achieve Institute Tutoring</h2>
+      <p class="author">Delta, BC | Tutor | Fall 2014 – Fall 2016</p>
+    </div>
+
+    <div class="mySlides">
+      <h2 class= "work">Dhaliwal Banquet Hall</h2>
+      <p class="author">Surrey, BC | Server | Summer 2014 – Winter 2015</p>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+  </section>
+
+
+
+  <section class="section section-light">
+    <div id= "github" onclick="location.href='http://www.google.com';" style="cursor:pointer;"><h1 id="git">Find my Projects on GitHub here</h1></div>
+  </section>
+
+  <section id="nopad" class="section section-dark">
+
+    <div id= "volunteer-div">
+        <h2 id="volunteering">VOLUNTEER EXPERIENCE</h2>
+        <ul id="volunteer-list">
+            <li>JDRF Type 1 Diabetes Fundraiser | Delta, BC | Summer 2013</li>
+            <li>RED FM Fort McMurray Fire Relief Fundraiser | Delta, BC |  2016</li>
+            <li>Terry Fox Run at Sungod Recreation Centre | Delta BC |  2015</li>
+            <li>Canadian Blood Services | Surrey, BC | Summer 2014 – Summer 2016 </li>
+            <li>One Match Stem Cell and Bone Marrow Event | North Delta Secondary School | 2016</li>
+        </ul>
+    </div>
+    <div id= "skill-div">
+        <h2 id="volunteering">SKILLS</h2>
+        <ul id="volunteer-list">
+            <li>Coding Experience with C, C++, Python, Javascript</li>
+            <li>Proficeient in front end and back end web development</li>
+            <li>Organized, Self-motivator, Mature, Professional and Positive attitude</li>
+            <li>Able to work efficiently in a group as well as alone</li>
+            <li>Excellent organization skills and attention to details</li>
+            <li>Fluent in English, Punjabi, and Hindi</li>
+        </ul>
+    </div>
+    <footer id="foot">
+      <p>Posted by: Sarbjot Singh</p>
+      <p>Contact information: sarbjot_14@hotmail.com</p>
+    </footer>
+  </section>
+<!--
+  <div class="pimg1">
+    <div class="ptext">
+      <span class="border">
+        Traversy Media
+      </span>
+    </div>
+  </div>
+-->
+</body>
+</html>
